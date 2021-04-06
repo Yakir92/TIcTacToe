@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,30 +10,36 @@ namespace TicTacToe
     {
         static void Main(string[] args)
         {
+            //Initializing Objects
             Board board = new Board();
             Input input = new Input();
             Player player = new Player();
             int k = 1;
             try
             {
+                //Game Loop
                 while (true)
                 {
+                    //Refreshing board
                     board.ShowBoard();
                     Console.Write("Player {0} Turn: ", player.playerTurn);
+
+                    //Check input on board (Insert sign or return false)
                     while (!(board.BoardInput(input.NewInput = Console.ReadLine(), player.playerSign))) ;
+
+                    //Check Game Status Or Show After Game Options
                     #region
                     if (board.WinOrNot(player.playerSign, player.playerTurn))
                     {
                         board.ShowBoard();
                         Console.WriteLine("Player {0} Wins", player.playerTurn);
-                        Console.WriteLine("Prees 1 To Reset or 2 to Exit the game.");
+                        Console.Write("Prees 1 To Reset or 2 to Exit the game:");
                         string choice = Console.ReadLine().ToString();
-                        if(choice != "1" || choice != "2")
-                            do
-                            {
-                                Console.WriteLine("Prees 1 To Reset or 2 to Exit the game.");
+                        while (choice != "1" && choice != "2") 
+                        {
+                                Console.Write("Prees 1 To Reset or 2 to Exit the game:");
                                 choice = Console.ReadLine().ToString();
-                            } while (choice != "1" || choice != "1");
+                        } 
 
                         if (choice.Equals("2"))
                             break;
@@ -51,6 +57,7 @@ namespace TicTacToe
                         
                     }
                     #endregion
+
                     player.TurnChange();
                     k++;
                 }
