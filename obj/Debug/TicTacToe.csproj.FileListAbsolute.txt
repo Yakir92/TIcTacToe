@@ -1,0 +1,7 @@
+C:\Users\yakir\Desktop\C# course\practice\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe.config
+C:\Users\yakir\Desktop\C# course\practice\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe
+C:\Users\yakir\Desktop\C# course\practice\TicTacToe\TicTacToe\bin\Debug\TicTacToe.pdb
+C:\Users\yakir\Desktop\C# course\practice\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
+C:\Users\yakir\Desktop\C# course\practice\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
+C:\Users\yakir\Desktop\C# course\practice\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
+C:\Users\yakir\Desktop\C# course\practice\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csprojAssemblyReference.cache
