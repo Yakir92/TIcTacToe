@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,10 +17,12 @@ namespace TicTacToe
         public string GetNewBoard(int i,int j) {
            return this.NewBoard[i,j];
         }
-        public void SetNewBoard(string value,int i,int j)
+        private void SetNewBoard(string value,int i,int j)
         {
            this.NewBoard[i, j] = value;
         }
+
+        //showing the board
         public void ShowBoard() {
             Console.Clear();
             for (int i = 0; i < 3; i++)
@@ -34,11 +36,13 @@ namespace TicTacToe
                     Console.WriteLine(" ---------");
             }
         }
+
+        //Check input on board (Insert sign or return false)
         public bool BoardInput(string value, string sign)
         {
             if (! (Check[Int32.Parse(value)-1]==null) )
             {
-                Console.WriteLine("Invaild Number");
+                Console.WriteLine("Invaild Number,Please Re-Type Number:");
                 return false;
             }
 
@@ -53,6 +57,8 @@ namespace TicTacToe
                     }
             return true;
         }
+
+        //Check if there is a winner
         public bool WinOrNot(string sign,int playerTurn)
         {
             //Rows
@@ -71,6 +77,7 @@ namespace TicTacToe
 
             return false;   
         }
+
         public void ResetBoard()
         {
             NewBoard = new string[,] { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "9" } };
